@@ -58,7 +58,7 @@ bin/GeodesicGrid.dll: ${GEO_FILES}
 
 clean:
 	rm -f ${TARGETS} assembly/AssemblyInfo.cs bin/GeodesicGrid.version
-	test -d bin && rmdir bin || true
+	test -d bin && rm -rf bin || true
 
 install: all
 	mkdir -p ${PLUGINDIR}
