@@ -12,7 +12,6 @@ GEO_FILES := \
 	CellMap.cs	\
 	CellSet.cs	\
 	ChildType.cs	\
-	EnumerableExtensions/AppendPrepend.cs	\
 	EnumerableExtensions/Edges.cs	\
 	EnumerableExtensions/MinMaxBy.cs	\
 	EnumerableExtensions/Pair.cs	\
@@ -52,7 +51,7 @@ info:
 bin/GeodesicGrid.dll: ${GEO_FILES}
 	@mkdir -p bin
 	${GMCS} ${GMCSFLAGS} -t:library -lib:${MANAGED} \
-		-r:UnityEngine,UnityEngine.UI \
+		-r:UnityEngine.CoreModule \
 		-resource:GeodesicGrid-LICENSE.txt,GeodesicGrid.GeodesicGrid-LICENSE.txt \
 		-out:$@ $^
 
